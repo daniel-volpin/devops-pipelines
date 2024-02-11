@@ -112,15 +112,8 @@ components:
           example: Volpin
         gradeRecords:
           type: array
-          example:
-          - 2.1
-          - 7.3
-          - 8.1
-          - 9.5
-          - 10.0
           items:
-            type: number
-            format: float
+            $ref: '#/components/schemas/GradeRecord'
       example:
         student_id: 1
         last_name: Volpin
