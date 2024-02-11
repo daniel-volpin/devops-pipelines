@@ -9,7 +9,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.0
 servers:
-- url: https://localhost:8080/DanielVolpin/tutorial/1.0.0
+- url: http://localhost:8080/DanielVolpin/tutorial/1.0.0
   description: SwaggerHub API Auto Mocking
 paths:
   /student/{student_id}:
@@ -43,12 +43,12 @@ paths:
     delete:
       summary: deletes a student
       description: |
-        delete a single student
+        Deletes a single student
       operationId: delete_student
       parameters:
       - name: student_id
         in: path
-        description: the uit
+        description: the uid
         required: true
         style: simple
         explode: false
@@ -58,6 +58,10 @@ paths:
       responses:
         "200":
           description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Student'
         "400":
           description: invalid ID
         "404":
@@ -109,11 +113,11 @@ components:
         gradeRecords:
           type: array
           example:
-          - 2.2
-          - 7.1
-          - 8.3
-          - 9.6
-          - 10
+          - 2.1
+          - 7.3
+          - 8.1
+          - 9.5
+          - 10.0
           items:
             type: number
             format: float
@@ -122,11 +126,11 @@ components:
         last_name: Volpin
         first_name: Daniel
         gradeRecords:
-        - 2.2
-        - 7.1
-        - 8.3
-        - 9.6
-        - 10
+        - 2.1
+        - 7.3
+        - 8.1
+        - 9.5
+        - 10.0
     GradeRecord:
       required:
       - grade

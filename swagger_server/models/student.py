@@ -24,7 +24,7 @@ class Student(Model):
         :param last_name: The last_name of this Student.  # noqa: E501
         :type last_name: str
         :param grade_records: The grade_records of this Student.  # noqa: E501
-        :type grade_records: List[float]
+        :type grade_records: List[int]
         """
         self.swagger_types = {
             'student_id': int,

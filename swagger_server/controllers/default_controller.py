@@ -5,7 +5,6 @@ from swagger_server.models.student import Student  # noqa: E501
 from swagger_server import util
 from swagger_server.service.student_service import *
 
-
 def add_student(body=None):  # noqa: E501
     """Add a new student
 
@@ -17,20 +16,20 @@ def add_student(body=None):  # noqa: E501
     :rtype: float
     """
     if connexion.request.is_json:
-        body = Student.from_dict(connexion.request.get_json())  # noqa: E501
+        body = Student.from_dict(connexion.request.get_json()) # noqa: E501
         return add(body)
-    return 500, 'error'
+    return 500,'error'
 
 
 def delete_student(student_id):  # noqa: E501
     """deletes a student
 
-    delete a single student  # noqa: E501
+    Deletes a single student  # noqa: E501
 
-    :param student_id: the uit
+    :param student_id: the uid
     :type student_id: float
 
-    :rtype: None
+    :rtype: Student
     """
     return delete(student_id)
 
