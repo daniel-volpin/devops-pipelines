@@ -119,11 +119,16 @@ components:
         last_name: Volpin
         first_name: Daniel
         gradeRecords:
-        - 2.1
-        - 7.3
-        - 8.1
-        - 9.5
-        - 10.0
+          - subject_name: Math
+            grade: 2.1
+          - subject_name: Science
+            grade: 7.3
+          - subject_name: History
+            grade: 8.1
+          - subject_name: English
+            grade: 9.5
+          - subject_name: PE
+            grade: 10.0
     GradeRecord:
       required:
       - grade
