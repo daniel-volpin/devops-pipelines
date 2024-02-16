@@ -1,9 +1,9 @@
 openapi: 3.0.0
 info:
-  title: Simple Inventory API
-  description: This is a simple API
+  title: Simple Student API
+  description: API for DevOps Course
   contact:
-    email: you@your-company.com
+    email: daniel.volpin@student.uva.nl
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -119,11 +119,16 @@ components:
         last_name: Volpin
         first_name: Daniel
         gradeRecords:
-        - 2.1
-        - 7.3
-        - 8.1
-        - 9.5
-        - 10.0
+          - subject_name: Math
+            grade: 2.1
+          - subject_name: English
+            grade: 7.3
+          - subject_name: Science
+            grade: 8.1
+          - subject_name: History
+            grade: 9.5
+          - subject_name: Art
+            grade: 10.0
     GradeRecord:
       required:
       - grade
