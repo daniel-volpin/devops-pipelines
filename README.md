@@ -47,3 +47,15 @@ docker build --tag dwolfv/student_service .
 # starting up a container
 docker run -p 8080:8080 dwolfv/student_service
 ``` 
+
+## Running microk8s
+
+To create the deployments and service type in the K8s folder:
+
+```bash
+# creating deplyoments
+microk8s kubectl apply -f .
+
+# getting all deplyoments and services
+microk8s kubectl get all
+``` 
