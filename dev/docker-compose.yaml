@@ -1,7 +1,7 @@
 version: '3'
 services:
   student_service:
-    image: devops/student_service
+    image: dwolfv/student_service
     restart: unless-stopped
     depends_on:
       - mongo
@@ -15,3 +15,8 @@ services:
     image: mongo:4
     ports:
       - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
