@@ -17,6 +17,11 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    networks:
+      - mynetwork
 
 volumes:
   mongo_data:
+
+networks:
+  mynetwork:
