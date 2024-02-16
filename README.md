@@ -42,10 +42,8 @@ To run the server on a Docker container, please execute the following from the r
 
 ```bash
 # building the image
-Docker users: docker build -t swagger_server .
-Podman users: podman build --tag devops/student_service .
+docker build --tag dwolfv/student_service .
 
 # starting up a container
-Docker users: docker run -p 8080:8080 swagger_server
-Podman users: podman run -p 8080:8080 devops/student_service
+docker run -p 8080:8080 dwolfv/student_service
 ``` 
