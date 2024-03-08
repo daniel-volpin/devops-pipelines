@@ -121,13 +121,13 @@ components:
         gradeRecords:
           - subject_name: Math
             grade: 2.1
-          - subject_name: English
-            grade: 7.3
           - subject_name: Science
-            grade: 8.1
+            grade: 7.3
           - subject_name: History
+            grade: 8.1
+          - subject_name: English
             grade: 9.5
-          - subject_name: Art
+          - subject_name: PE
             grade: 10.0
     GradeRecord:
       required:

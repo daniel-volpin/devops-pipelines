@@ -11,17 +11,26 @@ services:
       - "8080:8080"
 
   mongo:
-    restart: unless-stopped
-    image: mongo:4
+    restart: always
+    image: mongo:5.0.11
     ports:
       - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
+      - "27018:27018"
+      - "27019:27019"
     networks:
-      - mynetwork
-
-volumes:
-  mongo_data:
+      - mongo-network
+    volumes:
+      - mongodb_data:/data/db
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - "9081:8081"
+    networks:
+      - mongo-network
 
 networks:
-  mynetwork:
+  mongo-network:
+
+volumes:
+  mongodb_data:
